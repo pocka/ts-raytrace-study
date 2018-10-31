@@ -1,0 +1,36 @@
+{
+  "name": "ts-raytrace-study",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:pocka/ts-raytrace-study.git",
+  "author": "pocka <pockawoooh@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "husky": "^1.1.2",
+    "lint-staged": "^8.0.3",
+    "prettier": "^1.14.3",
+    "typescript": "^3.1.4"
+  },
+  "scripts": {
+    "build": "tsc && cp src/index.html dist/",
+    "watch": "tsc -w",
+    "serve": "http-server -p 8080 ./dist"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
