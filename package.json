@@ -14,9 +14,9 @@
     "typescript": "^3.1.4"
   },
   "scripts": {
-    "build": "tsc && cp src/index.html dist/",
+    "build": "tsc && cp src/index.html docs/",
     "watch": "tsc -w",
-    "serve": "http-server -p 8080 ./dist"
+    "serve": "http-server -p 8080 ./docs"
   },
   "prettier": {
     "semi": false,
